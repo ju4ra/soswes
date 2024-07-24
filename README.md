@@ -1,108 +1,13 @@
 # Swisstronik Tesnet Techinal Task 1
 
-link : [Click!](https://www.swisstronik.com/testnet2/dashboard)
-
-Feel free donate to my EVM address
 
 EVM :
 
 ```bash
 0x51894bAB233B03E89dbB037d36A7BB540B780cf4
 ```
-
-## Steps
-
-### 1. Clone Repository
+Swisstronik Testnet
 
 ```bash
-git clone https://github.com/Mnuralim/hardhat-deploy-contract.git
+swtr12xy5h2er8vp738dmqd7ndfam2s9hsr85kmude4
 ```
-
-```
-cd hardhat-deploy-contract
-```
-
-### 2. Install Dependency
-
-```bash
-npm install
-```
-
-### 3. Set .env File
-
-create .env file in root project
-
-```bash
-PRIVATE_KEY="your private key"
-```
-
-### 4. Create Smart Contract
-
-- Open contract folder
-- Create Hello_swtr.sol file
-- Copy this code and paste there
-
-```
-/// SPDX-License-Identifier: UNLICENSED
-pragma solidity ^0.8.19;
-
-//This contract is only intended for testing purposes
-
-contract Swisstronik {
-    string private message;
-
-    /**
-     * @dev Constructor is used to set the initial message for the contract
-     * @param _message the message to associate with the message variable.
-     */
-    constructor(string memory _message) payable{
-        message = _message;
-    }
-
-    /**
-     * @dev setMessage() updates the stored message in the contract
-     * @param _message the new message to replace the existing one
-     */
-    function setMessage(string memory _message) public {
-        message = _message;
-    }
-
-    /**
-     * @dev getMessage() retrieves the currently stored message in the contract
-     * @return The message associated with the contract
-     */
-    function getMessage() public view returns(string memory){
-        return message;
-    }
-}
-```
-
-### 5. Compile Smart Contract
-
-```bash
-npm run compile
-```
-
-### 6. Deploy Smart Contract
-
-```bash
-npm run deploy
-```
-
-### 7. Get Message
-
-```bash
-npm run get-message
-```
-
-### 8. Get Message
-
-```bash
-npm run set-message
-```
-
-### 9. Finsihed
-
-- Open the deployed-adddress.ts (location in utils folder)
-- Copy the address and paste the address in testnet dashboard
-- push this project to your github and paste your repository link in testnet dashboard
